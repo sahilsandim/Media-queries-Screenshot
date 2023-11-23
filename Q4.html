@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            background-color: #fff;
+            min-height: 100vh;
+        }
+        .box{
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .firstbox{
+
+            background-color: red;
+            color: white;
+        }
+        .secondbox{
+            background-color: green;
+            color: white;
+        }
+        .thirdbox{
+            background-color: blue;
+            color: white;
+        }
+        .fourthbox{
+            background-color:rgb(152, 97, 27);
+            color: white;
+        }
+        @media screen and (min-width:720px){
+        .grid-container{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: "firstbox firstbox firstbox"
+            "secondbox thirdbox thirdbox"
+            "fourthbox fourthbox fourthbox";
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="box firstbox">Box1</div>
+    <div class="box secondbox">Box2</div>
+    <div class="box thirdbox">Box3</div>
+    <div class="box fourthbox">Box4</div>
+    </div>
+</body>
+</html>
